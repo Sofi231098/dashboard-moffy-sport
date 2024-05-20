@@ -1,0 +1,18 @@
+.basic-layout {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+    transition: margin-left 0.5s;
+}
+
+.basic-layout__main {
+    background-color: #e5e5e5;
+    min-height: calc(100vh - 70px);
+    padding: 1rem;
+}
+
+@media (width > 768px) {
+    .basic-layout {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
