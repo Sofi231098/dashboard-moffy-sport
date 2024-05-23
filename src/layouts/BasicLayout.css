@@ -10,7 +10,7 @@
     padding: 1rem;
 }
 
-@media (width > 768px) {
+@media (min-width: 768px) {
     .basic-layout {
         margin-left: 200px;
         width: calc(100% - 200px);

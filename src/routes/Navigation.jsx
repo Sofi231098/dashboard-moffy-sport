@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { BasicLayout } from '../layouts';
+import { Home } from '../pages';
 
 export const Navigation = () => {
 
     const routes = [
         {
             path: "/",
-            component: <h1>Home</h1>,
+            component: Home,
             layout: BasicLayout,
             exact: true,
         },
@@ -25,23 +26,22 @@ export const Navigation = () => {
     ];
 
     return (
-        <>
-            <BrowserRouter>
-                <Routes>
-                    {routes.map((route, index) => (
-                        <Route
-                            key={index}
-                            path={route.path}
-                            exact={route.exact}
-                            element={
-                                <route.layout>
-                                    {route.component}
-                                </route.layout>
-                            }
-                        />
-                    ))}
-                </Routes>
-            </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <Routes>
+                {routes.map((route, index) => (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        exact={route.exact}
+                        element={
+                            <route.layout>
+                                <route.component />
+                                {/* {route.component} */}
+                            </route.layout>
+                        }
+                    />
+                ))}
+            </Routes>
+        </BrowserRouter>
     )
 }

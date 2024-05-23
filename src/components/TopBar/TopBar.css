@@ -1,8 +1,8 @@
 .top-bar {
     width: 100%;
     height: 70px;
-    background-color: #fafafa;
-    color: #525252;
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
     display: flex;
     justify-content: end;
     align-items: center;
