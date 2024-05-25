@@ -21,3 +21,30 @@
 body {
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.button{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--color-primary-500);
+    color: var(--color-primary-50);
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    display: inline-block;
+
+    &:hover{
+        background-color: var(--color-primary-600);
+    }
+}
+
+.button--primary{
+    background-color: var(--color-primary-800);
+    color: var(--color-primary-50);
+
+    &:hover{
+        background-color: var(--color-primary-900);
+    }
+}

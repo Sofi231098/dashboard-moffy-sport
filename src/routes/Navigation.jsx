@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { BasicLayout } from '../layouts';
-import { Home } from '../pages';
+import { Home, Products, ProductDetail } from '../pages';
 
 export const Navigation = () => {
 
@@ -13,13 +13,19 @@ export const Navigation = () => {
         },
         {
             path: "/users",
-            component: <h1>Usuarios</h1>,
+            component: Home,
             layout: BasicLayout,
             exact: true,
         },
         {
             path: "/products",
-            component: <h1>Productos</h1>,
+            component: Products,
+            layout: BasicLayout,
+            exact: true,
+        },
+        {
+            path: "/products/:id",
+            component: ProductDetail,
             layout: BasicLayout,
             exact: true,
         },
@@ -36,7 +42,6 @@ export const Navigation = () => {
                         element={
                             <route.layout>
                                 <route.component />
-                                {/* {route.component} */}
                             </route.layout>
                         }
                     />

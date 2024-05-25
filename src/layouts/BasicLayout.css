@@ -5,7 +5,7 @@
 }
 
 .basic-layout__main {
-    background-color: #e5e5e5;
+    background-color: var(--color-primary-200);
     min-height: calc(100vh - 70px);
     padding: 1rem;
 }
