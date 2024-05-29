@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { BasicLayout } from '../layouts';
-import { Home, Products, ProductDetail } from '../pages';
+import { Home, Products, ProductDetail, Users } from '../pages';
 
 export const Navigation = () => {
 
@@ -13,7 +13,7 @@ export const Navigation = () => {
         },
         {
             path: "/users",
-            component: Home,
+            component: Users,
             layout: BasicLayout,
             exact: true,
         },
