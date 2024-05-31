@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
+import './ProductDetail.css';
 
 export const ProductDetail = () => {
 
@@ -17,12 +18,17 @@ export const ProductDetail = () => {
     return (
         <section className='product__section'>
             <article className='product__article'>
-                <h1>{product.title}</h1>
-                <img src={`http://localhost:3000/images/products/${product.images?.[0].image}`} alt='Producto' />
-                <p>Marca: {product.brand}</p>
-                <p>Precio: ${product.price}</p>
-                <p>Stock: {product.stock}</p>
-                <p>{product.description}</p>
+                    <h1 className="product__title">{product.title}</h1>
+                    <img className='product__image' src={`http://localhost:3000/images/products/${product.images?.[0].image}`} alt='Producto' />
+                <div className="product__detail">
+                    <p> <b>Marca:</b> {product.brand}</p>
+                    <p><b>Precio:</b> ${product.price}</p>
+                    <p><b>Stock:</b> {product.stock}</p>
+                    <div>
+                        <p>{product.description}</p>
+                    </div>
+                    <a className='button button--primary' href={`/products`}>Volver</a>
+                </div>
             </article>
         </section>
     )
