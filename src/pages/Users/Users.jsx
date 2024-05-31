@@ -26,13 +26,14 @@ export const Users = () => {
         <section className='items__section'>
             <article className='items__article'>
                 {users.length === 0 ? <h1>No hay usuarios</h1> :
-                    <table className='users__table'>
+                    <table className='products__table'>
                         <thead>
                             <tr>
                                 <th>Imagen</th>
                                 <th>Nombre</th>
+                                <th>Apellido</th>
                                 <th>Email</th>
-                                <th>Usuario</th>
+                                <th>Tipo</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -41,10 +42,11 @@ export const Users = () => {
                                 return (
                                     <tr key={index}>
                                         {/* preguntar a pupi, que me explique */}
-                                        <td className='td__image'><img src={`http://localhost:3000/images/users/${user.image}`} alt='Usuario' /></td>
+                                        <td className='td__image'><img src={`http://localhost:3000/${user.image}`} alt='Usuario' /></td>
                                         <td>{user.name}</td>
+                                        <td>{user.lastName}</td>
                                         <td>{user.email}</td>
-                                        <td>{user.username}</td>
+                                        <td>{user.tipo ? 'Admin' : 'Usuario Común'}</td> 
                                         <td className='td__actions'>
                                             <a className='button button--primary' href={`/users/${user.id}`}>Ver</a>
                                             <button className='button' onClick={() => handleDelete(user.id)}>Eliminar</button>

@@ -1,7 +1,11 @@
 import './Home.css';
+import ContentRowTop from '../../components/ContentRowTop/ContentRowTop';
+
 
 export const Home = () => {
-    return (
-        <h1 className='home__titulo'>Soy el maestro YODA</h1>
-    )
+        return (
+            <div>
+                <ContentRowTop />
+            </div>
+        );
 }
