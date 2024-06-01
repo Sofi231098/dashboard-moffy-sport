@@ -17,20 +17,21 @@ function ConTentRowTop(){
             {
                 title: 'Products in Data Base',
                 color: 'primary',
-                icon: 'fa-film',
-                quantity: products?.length
+                icon: 'fa-store',
+                quantity: products?.data?.length
             },
             {
                 title: 'Total Brands',
                 color: 'success',
-                icon: 'fa-award',
-                quantity:brands?.length // Aquí debes calcular la cantidad de marcas
+                icon: 'fa-tags',
+                quantity: "3"
+               
             },
             {
                 title: 'User quantity',
                 color: 'warning',
                 icon: 'fa-user',
-                quantity: users?.length
+                quantity: users?.data.length
             }
         ]);
     }, [products, users, brands]);
@@ -51,3 +52,5 @@ function ConTentRowTop(){
 }
 
 export default ConTentRowTop;
+
+{/*} quantity: new Set(brands.data.map(brand => brand.brand)).size */}
