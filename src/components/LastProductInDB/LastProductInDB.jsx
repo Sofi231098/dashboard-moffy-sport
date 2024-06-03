@@ -10,7 +10,7 @@ function LastProductInDB ({ data }){
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '40rem' }} src={`../../assets/imgs/${data.images[0]?.image}`} alt="Last product in Data Base" />
+                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '20rem' }} src={`http://localhost:3000/images/products/${data.images[0]?.image}`} alt="Last product in Data Base" />
                     </div>
                     <p>{data.description}</p>
                     <a className="btn btn-dark" target="_blank" rel="nofollow" href={`/products/${data.id}`}>View Product detail</a>

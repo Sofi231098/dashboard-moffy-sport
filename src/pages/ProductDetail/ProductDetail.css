@@ -24,13 +24,11 @@
 }
 
 .product__image {
-    width: 80%;
+    width: 90%;
     height: 350px;
     aspect-ratio: 1/1;
-    border-radius: 8px;
     margin: 0 auto 0.8rem;
-    object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    object-fit:contain;
     display: block;
     @media (max-width: 768px) {
         width: 100%;
