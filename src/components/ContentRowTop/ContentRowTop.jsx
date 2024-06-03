@@ -25,7 +25,6 @@ function ConTentRowTop(){
                 color: 'success',
                 icon: 'fa-tags',
                 quantity: "3"
-               
             },
             {
                 title: 'User quantity',
