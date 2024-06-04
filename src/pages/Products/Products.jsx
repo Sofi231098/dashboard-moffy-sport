@@ -49,7 +49,6 @@ export const Products = () => {
                                         <td>{product.stock}</td>
                                         <td className='td__actions'>
                                             <a className='button button--primary' href={`/products/${product.id}`}>Ver</a>
-                                            <button className='button' onClick={() => handleDelete(product.id)}>Eliminar</button>
                                         </td>
                                     </tr>
                                 )

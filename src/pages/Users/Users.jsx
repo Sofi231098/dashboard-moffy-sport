@@ -46,10 +46,9 @@ export const Users = () => {
                                         <td>{user.name}</td>
                                         <td>{user.lastName}</td>
                                         <td>{user.email}</td>
-                                        <td>{user.tipo ? 'Admin' : 'Usuario Común'}</td> 
+                                        <td>{user.tipo ? 'Administrador' : 'Usuario Común'}</td> 
                                         <td className='td__actions'>
                                             <a className='button button--primary' href={`/users/${user.id}`}>Ver</a>
-                                            <button className='button' onClick={() => handleDelete(user.id)}>Eliminar</button>
                                         </td>
                                     </tr>
                                 )

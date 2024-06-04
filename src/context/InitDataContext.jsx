@@ -9,6 +9,7 @@ const InitDataContext = createContext();
 function InitDataProvider({ children }){
     const [data, setData] = useState({
         products: null,
+        purchases: null,
         brands: null,
         users: null
     });
@@ -21,9 +22,10 @@ function InitDataProvider({ children }){
     const getProducts = async () => {
         try {
             const products = await axios.get('http://localhost:3000/api/products');
+            const purchases = await axios.get('http://localhost:3000/api/purchases');
             const brands = await axios.get('http://localhost:3000/api/products');
             const users = await axios.get('http://localhost:3000/api/users');
-            setData({products: products.data, brands: brands.data, users: users.data});
+            setData({products: products.data, purchases: purchases.data, brands: brands.data , users: users.data});
         } catch (error) {
             throw new Error(error);
         }

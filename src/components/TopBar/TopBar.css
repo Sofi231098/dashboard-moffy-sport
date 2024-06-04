@@ -10,6 +10,7 @@
     padding-inline: 1rem;
 
     & .top-bar__name {
+        margin-top: 15px;
         font-weight: 500;
     }
 
