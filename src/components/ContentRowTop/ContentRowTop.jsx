@@ -7,7 +7,7 @@ import BrandsInDB from "../BrandsInDB/BrandsInDB";
 
 
 function ConTentRowTop(){
-    const {products, users, brands} = useContext(InitDataContext);
+    const {products, users, purchases} = useContext(InitDataContext);
     const [lastProduct, setLastProduct] = useState(null);
     const [data, setData] = useState([]);
 
@@ -21,10 +21,10 @@ function ConTentRowTop(){
                 quantity: products?.data?.length
             },
             {
-                title: 'Total Brands',
+                title: 'Total Purchases',
                 color: 'success',
-                icon: 'fa-tags',
-                quantity: "3"
+                icon: 'fa-solid fa-money-bill',
+                quantity: purchases?.data.length
             },
             {
                 title: 'User quantity',
@@ -33,7 +33,7 @@ function ConTentRowTop(){
                 quantity: users?.data.length
             }
         ]);
-    }, [products, users, brands]);
+    }, [products, users, purchases]);
 
 
     return(
